@@ -1,0 +1,46 @@
+<div class="main-container">
+  <div class="contact-form">
+    <div class="icon-div">
+      <img class="email-icon" src="assets/images/email.png" />
+    </div>
+    <form class="contact-info" #f="ngForm" (ngSubmit)="onSubmitPost(f.value)">
+      <div class="get-in-touch">Get In Touch</div>
+      <div ngModelGroup="userData">
+        <div class="input-div">
+          <div class="column-div column-width">
+            <label for="firstname">First Name</label>
+            <input placeholder="Enter Firstname" type="text" id="firstname" name="firstname" ngModel #firstname="ngModel" required/>
+            <!-- <span class='help-block' *ngIf="!firstname.valid && firstname.touched" >Please enter a valid firstname!</span> -->
+          </div>
+          <div class="column-div column-width">
+            <label for="lastname">Last Name</label>
+            <input placeholder="Enter Lastname" type="text" id="lastname" name="lastname" ngModel #lastname="ngModel" required/>
+            <!-- <span class='help-block' *ngIf="!lastname.valid && lastname.touched" >Please enter a valid lastname!</span> -->
+          </div>
+        </div>
+        <div class="input-div">
+          <div class="column-div">
+            <label for="email">Your Email</label>
+            <input placeholder="Enter Your Email" type="email" id="email" name="email" ngModel required email #email="ngModel"/>
+            <!-- <span class="help-block" *ngIf="!email.valid "></span> -->
+            <!-- <span class='help-block' *ngIf="!email.valid && email.touched" >Please enter a valid email!</span> -->
+          </div>
+        </div>
+        <div class="input-div">
+          <div class="column-div">
+            <label for="question">Your Question</label>
+            <textarea placeholder="Enter Your Question" name="question" id="question" cols="20" rows="5" ngModel required #question="ngModel"></textarea>
+            <!-- <span class='help-block' *ngIf="!question.valid && question.touched" >Please enter text!</span> -->
+          </div>
+        </div>
+        <button (click)="backdrop()" type="submit">Send</button>
+      </div>
+      <div *ngIf="state" class='message'>
+        <img src="assets/images/message-icon.PNG">
+        <div class='message-sent'>Message has been sent successfully. Thanks!</div>
+        <mat-icon (click)="backdropRemove()">close</mat-icon>
+      </div>
+      <div *ngIf="state" class='background'></div>
+    </form>
+  </div>
+</div>

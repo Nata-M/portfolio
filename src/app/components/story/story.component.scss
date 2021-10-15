@@ -1,0 +1,21 @@
+.story {
+    width: 100%;
+    font-size: 48px;
+    font-family: 'Playball', cursive;
+    text-align: center;
+    color: #263646;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+.text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .text {
+        width: 70%;
+        font: normal normal normal 15px Open Sans;
+        color: #2f4255;
+        line-height: 1.8;
+        text-align: center;
+    }
+}
