@@ -6,6 +6,7 @@
     color: #263646;
     margin-top: 80px;
     margin-bottom: 50px;
+    line-height: 1.5;
 }
 .text-container {
     width: 100%;
@@ -17,5 +18,14 @@
         color: #2f4255;
         line-height: 1.8;
         text-align: center;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .story {
+        font-size: 24px !important;
+        margin-bottom: 20px !important;
+    }
+    .text {
+        width: 100% !important;
     }
 }
