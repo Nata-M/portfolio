@@ -9,7 +9,7 @@
     .left-container {
         width: 40%;
         height: 100%;
-        background-color: rgb(107, 107, 107);
+        background-color: rgb(48, 46, 46);
         display: flex;
         align-items: flex-end;
         .projects-portfolio {
@@ -32,13 +32,16 @@
         .portfolio-container {
             display: flex;
             flex-direction: row;
-            width: 800px;
+            width: 820px;
             flex-wrap: wrap;
             gap: 30px;
             margin-top: 100px;
             margin-left: -80px;
+            overflow-y: scroll;
+            height: 520px;
+            position: relative;
             .item {
-                width: calc((100% - 30px)/2);
+                width: calc((100% - 40px)/2);
                 height: 240px;
                 border-radius: 5px;
                 background-color: #fff;
@@ -114,6 +117,8 @@
                 width: 100%;
                 align-items: center;
                 margin-bottom: 30px;
+                overflow-y: auto;
+                height: auto;
                 .item {
                     width: 50% !important;
                     height: 330px;
@@ -132,3 +137,17 @@
         }
     }
 }
+::-webkit-scrollbar {
+    width: 4px;
+    position: absolute;
+    left: -50px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #dad8d8; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(37, 122, 179); 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
